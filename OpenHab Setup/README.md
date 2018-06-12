@@ -2,7 +2,7 @@
 This tutorial does a quick explanation on how to send the data from EmonCMS over MQTT to be read by OpenHab and display a simple statistic on power usage/generation. This setup requires you to have Persistence on OpenHab with MQTT. 
 
 
-## Items
+## OpenHab Items
 ```
 Number  ct1power          "Realtime [%.1f W]" {mqtt="<[mosquitto:emoncms//ct1/power:state:default]"}
 Number  ct1powerday       "Today [%.1f kWh]"
@@ -10,7 +10,7 @@ Number  ct1powerhour      "Last hour [%.1f kWh]"
 Number  ct1powercum       "Total [%.2f kWh]"   {mqtt=">[mosquitto:emoncms/ct1/powercum:state:*:default]"}
 ```
 
-## Rules
+## OpenHab Rules
 The `Energy Init` Rule will make sure the values exist at the start. It can be removed after a first boot.
 ```
 var long LastUpdate = 0
@@ -59,7 +59,7 @@ then
         postUpdate(ct1powerhour, (ct1powercum.state as DecimalType - ct1powercum.historicState(now.minusHours(1)).state as DecimalType))
 end
 ```
-## Sitemap
+## OpenHab Sitemap
 ```
 sitemap default label="ENERGY TEST"
 {

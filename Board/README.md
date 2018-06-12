@@ -4,6 +4,8 @@ Fully based on the original by OpenEnergyMonitor. Found here: https://github.com
 
 Changes include removing all components not connected to the working of the CT Sensor measurements or 9V AC-AC measurement. Same size as other one to increase compatability. 
 
+Making this board is absolutly not required. EmonTX Shield from OpenEnergyMonitor is perfect and even offers the option to also use the radio module. 
+
 ## Components 
 Components required to build and solder it yourself. I included links to a component website I ordered them from. There are usually many different options available. 
 * 5x 10 µF STM capacitors: https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A106KP8NNNC_10uF-106-10-10V_C19702.html

@@ -4,7 +4,7 @@ This tutorial does a quick explanation on how to send the data from EmonCMS over
 
 ## OpenHab Items
 ```
-Number  ct1power          "Realtime [%.1f W]" {mqtt="<[mosquitto:emoncms//ct1/power:state:default]"}
+Number  ct1power          "Realtime [%.1f W]" {mqtt="<[mosquitto:emoncms/ct1/power:state:default]"}
 Number  ct1powerday       "Today [%.1f kWh]"
 Number  ct1powerhour      "Last hour [%.1f kWh]"
 Number  ct1powercum       "Total [%.2f kWh]"   {mqtt=">[mosquitto:emoncms/ct1/powercum:state:*:default]"}

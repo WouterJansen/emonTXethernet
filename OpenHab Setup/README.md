@@ -3,6 +3,7 @@ This tutorial does a quick explanation on how to send the data from EmonCMS over
 
 ## EmonCMS Input process 
 In order for OpenHab to be able to read the MQTT messages we have to send them first with EmonCMS. Choose your input and add a process setup like this: 
+
 ![Image of EmonCMS MQTT Process](https://i.imgur.com/cZQnjcB.png "EmonCMS MQTT Process")
 
 ## OpenHab Items

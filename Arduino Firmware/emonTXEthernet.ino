@@ -70,14 +70,14 @@ void loop()
   ct4.calcVI(20, 2000);
   // Extract individual elements (realpower,Vrms and Irms)
   // and use them as arugments for printing and sending the data. First argument is node name.
-  printData("ct1", -ct1.realPower, ct1.Vrms, ct1.Irms);
-  sendData("ct1", -ct1.realPower, ct1.Vrms, ct1.Irms);
-  printData("ct2", -ct2.realPower, ct2.Vrms, ct2.Irms);
-  sendData("ct2", -ct2.realPower, ct2.Vrms, ct2.Irms);
-  printData("ct3", -ct3.realPower, ct3.Vrms, ct3.Irms);
-  sendData("ct3", -ct3.realPower, ct3.Vrms, ct3.Irms);
-  printData("ct4", -ct4.realPower, ct4.Vrms, ct4.Irms);
-  sendData("ct4", -ct4.realPower, ct4.Vrms, ct4.Irms);
+  printData("ct1", ct1.realPower, ct1.Vrms, ct1.Irms);
+  sendData("ct1", ct1.realPower, ct1.Vrms, ct1.Irms);
+  printData("ct2", ct2.realPower, ct2.Vrms, ct2.Irms);
+  sendData("ct2", ct2.realPower, ct2.Vrms, ct2.Irms);
+  printData("ct3", ct3.realPower, ct3.Vrms, ct3.Irms);
+  sendData("ct3", ct3.realPower, ct3.Vrms, ct3.Irms);
+  printData("ct4", ct4.realPower, ct4.Vrms, ct4.Irms);
+  sendData("ct4", ct4.realPower, ct4.Vrms, ct4.Irms);
   //Small interval delay to limit the data stream
   delay(postingInterval);
 }

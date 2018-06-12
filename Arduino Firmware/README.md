@@ -3,7 +3,8 @@ This firmware sketch is meant for a Arduino with Ethernet Shield and EmonTX Shie
 
 It also prints out the information on the serial connection for debugging purposes. 
 
-Based on the EmonTX Shield Serial Only example:
+## Credits
+* Based on the EmonTX Shield Serial Only example:
 https://github.com/openenergymonitor/emontx-shield/blob/master/firmware/Shield_CT1234_Voltage_SerialOnly/Shield_CT1234_Voltage_SerialOnly.ino
-and the Ethernet Client example.
+* Based on the Arduino Ethernet Client example.
 

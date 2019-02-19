@@ -72,7 +72,7 @@ void loop()
   ct3.calcVI(20, 2000);
   ct4.calcVI(20, 2000);
   // Extract individual elements (realpower,Vrms and Irms)
-  // and use them as arugments for printing and sending the data. First argument is node name.
+  // and use them as arguments for printing and sending the data. First argument is node name.
   printData("ct1", ct1.realPower, ct1.Vrms, ct1.Irms);
   sendData("ct1", ct1.realPower, ct1.Vrms, ct1.Irms);
   printData("ct2", ct2.realPower, ct2.Vrms, ct2.Irms);

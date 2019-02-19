@@ -43,15 +43,17 @@ void setup()
   }
   // Ethernet warmup delay
   delay(2000);
-  Serial.println("EMONTX HTTP client started!");
+  Serial.println("EMONTX HTTP client started!"); 
+  // First argument is analog pin used by CT connection, second is calibration factor. 
   // Calibration factor = CT ratio / burden resistance = (100A / 0.05A) / 33 Ohms = 60.606
-  // First argument is analog pin used by CT connection
   ct1.current(1, 60.606);
   ct2.current(2, 60.606);
   ct3.current(3, 60.606);
   ct4.current(4, 60.606);
-  // First argument is analog pin used by AC-AC adapter. Second is calibration, third is phase_shift.
-  // See the OpenEnergyMonitor guides to calculate your calibration factor
+  // First argument is analog pin used by AC-AC adapter. Second is calibration, third is phase shift.
+  // See the OpenEnergyMonitor guides to find the calibration factor of some common AC-AC adapters or calculate it yourself.
+  // Use a multimeter to measure the voltage around a resistive load. Compare the voltage measured to the reported voltage of the emonTx here.
+  // Recalibrate using: New calibration = existing calibration × (correct reading ÷ emonTx reading).
   ct1.voltage(0, 245, 1.7);
   ct2.voltage(0, 245, 1.7);
   ct3.voltage(0, 245, 1.7);

@@ -53,7 +53,8 @@ void setup()
   // First argument is analog pin used by AC-AC adapter. Second is calibration, third is phase shift.
   // See the OpenEnergyMonitor guides to find the calibration factor of some common AC-AC adapters or calculate it yourself.
   // Use a multimeter to measure the voltage around a resistive load. Compare the voltage measured to the reported voltage of the emonTx here.
-  // Recalibrate using: New calibration = existing calibration × (correct reading ÷ emonTx reading).
+  // Recalibrate using: New calibration = existing calibration × (correct reading ÷ emonTx reading)
+  https://learn.openenergymonitor.org/electricity-monitoring/ctac/calibration
   ct1.voltage(0, 245, 1.7);
   ct2.voltage(0, 245, 1.7);
   ct3.voltage(0, 245, 1.7);

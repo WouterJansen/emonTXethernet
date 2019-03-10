@@ -31,10 +31,12 @@ char emoncmsserver[] = "192.168.0.178";
 String emoncmsapikey = "YOUR API KEY";
 // Update frequency
 const unsigned long postingInterval = 10000;
+unsigned long lastConnectionTime = 0;
 
 void setup()
 {
   Serial.begin(9600);
+  Serial.println("EMONTX Started!");
   // start the Ethernet connection:
   if (Ethernet.begin(mac) == 0) {
     Serial.println("Failed to configure Ethernet using DHCP");
